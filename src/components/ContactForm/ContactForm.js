@@ -12,31 +12,25 @@ function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const contactCheck = () => {
-    const namesIsIn = contacts.reduce(
-      (acc, contact) => [...acc, contact.name],
-      [],
-    );
-    const numbersIsIn = contacts.reduce(
-      (acc, contact) => [...acc, contact.number],
-      [],
-    );
-
-    if (namesIsIn.includes(name) || numbersIsIn.includes(number)) {
-      alert(`${name}${number} is already in contacts`);
-    }
-
-    if (name === '' || number === '') {
-      alert('Enter all data, please');
-    }
-  };
+ 
 
   const handleSubmit = event => {
     event.preventDefault();
     setName('');
     setNumber('');
-    if (contactCheck()) {
+
+    if (contacts.some(contact => contact.name === name)) {
+      alert(`This ${name} is already in contacts.`);
       return;
+    }
+
+    if (contacts.some(contact => contact.number === number)) {
+      alert(`This ${number} is already in contacts.`);
+      return;
+    }
+
+    if (name === '' || number === '') {
+      alert('Enter all data, please');
     }
 
     onSubmit(name, number);
