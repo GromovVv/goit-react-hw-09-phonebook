@@ -1,0 +1,26 @@
+.HomeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.HomeBtn {
+  width: 200px;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: #5d8aa8;
+  background: white;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.HomeBtn:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}

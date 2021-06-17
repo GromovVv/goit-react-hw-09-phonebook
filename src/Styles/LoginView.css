@@ -1,0 +1,66 @@
+.LoginForm {
+  width: 445;
+}
+
+.LoginLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.LoginSection {
+  padding: 20px;
+
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+
+  background-color: rgba(108, 108, 108, 0.3);
+  box-shadow: 0px 0px 20px 10px rgba(33, 60, 80, 0.28) inset;
+}
+
+.LoginTitle {
+  text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.LoginBtn:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.LoginBtn {
+  width: 150px;
+  margin-bottom: 15px;
+  padding: 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  border: 2px solid white;
+  border-radius: 4px;
+  color: #5d8aa8;
+  background: white;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.LoginInput {
+  width: 422px;
+  margin-bottom: 15px;
+  padding: 10px;
+
+  font: inherit;
+  font-size: 20px;
+
+  border-radius: 4px;
+  color: #171718;
+  border: 1px solid #bdbdbd;
+  outline: 0;
+}
